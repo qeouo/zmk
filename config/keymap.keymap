@@ -6,11 +6,15 @@
 #include <input/processors.dtsi>
 #define MOUSE 1
 
-&mkp_input_listener{
-    input-processors = <&zip_temp_layer MOUSE 250>;
-}
 
 / {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        input-processors = <&zip_temp_layer MOUSE 10000>;
+    };
+
     combos { compatible = "zmk,combos"; };
 
     keymap {
