@@ -45,18 +45,6 @@
 
     combos { compatible = "zmk,combos"; };
 
-    behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp Q>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LCTL)>;
-            mods = <(MOD_LCTL)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
