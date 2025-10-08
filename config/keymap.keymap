@@ -36,7 +36,7 @@
             input-processors =
                 <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 1 16>,
-<&zip_x_scaler 0 16>,
+                <&zip_x_scaler 0 16>,
                 <&zip_xy_to_scroll_mapper>;
 
             process-next;
@@ -44,6 +44,18 @@
     };
 
     combos { compatible = "zmk,combos"; };
+
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp Q>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL)>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
