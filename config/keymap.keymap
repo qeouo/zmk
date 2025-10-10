@@ -52,6 +52,7 @@
             #binding-cells = <0>;
             bindings = <&kp INT2 &kp GRAVE>;
             label = "IME_OFF";
+            wait-ms = <16>;
         };
     };
 
@@ -87,7 +88,7 @@
         hold_yuusen: hold_yuusen {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_YUUSEN";
-            bindings = <&lt>, <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
