@@ -50,9 +50,9 @@
         ime_off: ime_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT2 &kp GRAVE>;
+            bindings = <&kp INT_KANA &kp GRAVE>;
             label = "IME_OFF";
-            wait-ms = <16>;
+            wait-ms = <1>;
         };
     };
 
@@ -80,9 +80,8 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             hold-while-undecided;
-            retro-tap;
         };
 
         hold_yuusen: hold_yuusen {
