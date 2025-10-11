@@ -109,7 +109,7 @@
         ctrl_q: ctrl_q {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_Q";
-            bindings = <&kp Q>, <&kp TAB>;
+            bindings = <&q_esc>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
