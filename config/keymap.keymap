@@ -52,7 +52,7 @@
         ime_off: ime_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_MUHENKAN &kp LC(LANG2)>;
+            bindings = <&kp INT_MUHENKAN &kp LANG2>;
             label = "IME_OFF";
             wait-ms = <0>;
         };
