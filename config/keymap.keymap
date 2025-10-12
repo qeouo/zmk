@@ -54,7 +54,7 @@
             #binding-cells = <0>;
             bindings = <&kp INT_KANA &kp GRAVE>;
             label = "IME_OFF";
-            wait-ms = <1>;
+            wait-ms = <0>;
         };
     };
 
@@ -82,7 +82,7 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             hold-while-undecided;
         };
 
