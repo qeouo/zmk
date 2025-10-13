@@ -151,11 +151,11 @@
 
         cursor {
             bindings = <
-&trans  &trans           &trans           &trans           &trans           &trans                           &trans      &trans       &trans         &trans      &trans         &trans
-&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4     &kp N5                           &kp ESCAPE  &kp TAB      &trans         &kp DELETE  &kp BACKSPACE  &trans
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans  &trans  &kp LEFT    &kp DOWN     &kp UP_ARROW   &kp RIGHT   &kp ENTER      &trans
-&trans  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans  &trans  &kp HOME    &kp PAGE_UP  &kp PAGE_DOWN  &kp END     &trans         &trans
-&trans  &trans           &trans           &trans           &trans           &trans           &trans  &trans  &trans      &trans       &trans         &trans      &trans         &trans
+&trans  &trans           &trans           &trans           &trans           &trans                           &trans      &trans       &trans         &trans         &trans               &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4     &kp N5                           &kp ESCAPE  &kp TAB      &kp DEL        &kp BACKSPACE  &kp MINUS            &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans  &trans  &kp LEFT    &kp DOWN     &kp UP_ARROW   &kp RIGHT      &kp ENTER            &trans
+&trans  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans  &trans  &kp HOME    &kp PAGE_UP  &kp PAGE_DOWN  &kp END        &kp INTERNATIONAL_1  &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans  &trans  &trans      &trans       &trans         &trans         &trans               &trans
             >;
         };
 
