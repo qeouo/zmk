@@ -78,7 +78,7 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp ESCAPE>;
 
-            tapping-term-ms = <120>;
+            tapping-term-ms = <180>;
         };
 
         macro_layer: macro_layer {
