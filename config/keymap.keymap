@@ -173,11 +173,11 @@
 
         symbol {
             bindings = <
-&trans  &trans            &trans                &trans           &trans           &trans                           &trans                   &trans                &trans                 &trans             &trans            &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)      &kp LS(N3)       &kp LS(N4)       &kp LS(N5)                       &kp LS(N6)               &kp LS(SINGLE_QUOTE)  &kp LS(N8)             &kp LS(N9)         &kp LS(MINUS)     &trans
-&trans  &kp LEFT_BRACKET  &kp LS(N7)            &kp INT_RO       &kp KP_N4        &kp KP_N5        &trans  &trans  &kp LS(INTERNATIONAL_3)  &kp MINUS             &kp RIGHT_BRACKET      &kp BACKSLASH      &kp SINGLE_QUOTE  &trans
-&trans  &kp LS(SLASH)     &kp LS(LEFT_BRACKET)  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans  &trans  &kp LS(GRAVE)            &kp LS(SEMICOLON)     &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp LS(INT1)      &trans
-&trans  &trans            &trans                &trans           &trans           &trans           &trans  &trans  &trans                   &trans                &trans                 &trans             &trans            &trans
+&trans  &trans            &trans                &trans         &trans      &trans                           &trans                   &trans                &trans                 &trans             &trans            &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)      &kp LS(MINUS)  &kp LS(N4)  &kp LS(EQUAL)                    &kp LS(N6)               &kp LS(SINGLE_QUOTE)  &kp LS(N8)             &kp LS(N9)         &kp LS(MINUS)     &trans
+&trans  &kp LEFT_BRACKET  &kp LS(N7)            &kp INT_RO     &kp KP_N4   &kp KP_N5        &trans  &trans  &kp LS(INTERNATIONAL_3)  &kp MINUS             &kp RIGHT_BRACKET      &kp BACKSLASH      &kp SINGLE_QUOTE  &trans
+&trans  &kp LS(SLASH)     &kp LS(LEFT_BRACKET)  &kp LS(EQUAL)  &kp EQUAL   &kp KP_NUMBER_0  &trans  &trans  &kp LS(GRAVE)            &kp LS(SEMICOLON)     &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp LS(INT1)      &trans
+&trans  &trans            &trans                &trans         &trans      &trans           &trans  &trans  &trans                   &trans                &trans                 &trans             &trans            &trans
             >;
         };
 
