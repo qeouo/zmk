@@ -23,7 +23,8 @@
         34 // K
         35 // L
         36 // ;
-        >;
+        53
+        54>;
     };
 
     trackball_listener: trackball_listener {
