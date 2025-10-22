@@ -185,11 +185,11 @@
 
         symbol {
             bindings = <
-&trans  &trans            &trans                &trans            &trans               &trans                               &trans                &trans            &trans             &trans                   &trans    &trans
-&trans  &kp NUMBER_1      &kp NUMBER_2          &kp NUMBER_3      &kp N4               &kp NUMBER_5                         &kp N6                &kp N7            &kp N8             &kp N9                   &kp N0    &trans
-&trans  &kp LEFT_BRACKET  &kp LS(N7)            &kp LS(NUMBER_4)  &kp INTERNATIONAL_1  &kp LS(EQUAL)        &trans  &trans  &kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH            &kp SEMI  &trans
-&trans  &kp LS(SLASH)     &kp LS(LEFT_BRACKET)  &kp EQUAL         &kp EQUAL            &kp INTERNATIONAL_1  &trans  &trans  &kp SLASH             &kp LS(SEMI)      &kp LS(SLASH)      &kp LS(INTERNATIONAL_1)  &trans    &trans
-&trans  &trans            &trans                &trans            &trans               &trans               &trans  &trans  &trans                &trans            &trans             &trans                   &trans    &trans
+&trans  &trans            &trans                &trans            &trans               &trans                               &trans                   &trans            &trans             &trans                   &trans    &trans
+&trans  &kp NUMBER_1      &kp NUMBER_2          &kp NUMBER_3      &kp N4               &kp NUMBER_5                         &kp N6                   &kp N7            &kp N8             &kp N9                   &kp N0    &trans
+&trans  &kp LEFT_BRACKET  &kp LS(N7)            &kp LS(NUMBER_4)  &kp INTERNATIONAL_1  &kp LS(EQUAL)        &trans  &trans  &kp LS(SINGLE_QUOTE)     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH            &kp SEMI  &trans
+&trans  &kp LS(SLASH)     &kp LS(LEFT_BRACKET)  &kp EQUAL         &kp EQUAL            &kp INTERNATIONAL_1  &trans  &trans  &kp LS(INTERNATIONAL_3)  &kp LS(SEMI)      &kp SLASH          &kp LS(INTERNATIONAL_1)  &trans    &trans
+&trans  &trans            &trans                &trans            &trans               &trans               &trans  &trans  &trans                   &trans            &trans             &trans                   &trans    &trans
             >;
         };
 
