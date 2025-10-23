@@ -24,7 +24,8 @@
         35 // L
         36 // ;
         53
-        54>;
+        5
+        >;
     };
 
     trackball_listener: trackball_listener {
@@ -154,11 +155,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1          &kp N2  &kp N3    &kp N4     &kp N5                                                  &kp N6                   &kp N7    &kp N8     &kp N9      &kp N0     &kp BSPC
-&kp TAB    &alt_q          &kp W   &kp E     &kp R      &kp T                                                   &kp Y                    &kp U     &kp I      &kp O       &kp P      &kp BSPC
-&kp LCTRL  &kp A           &kp S   &kp D     &kp F      &kp G                        &mkp LCLK       &mkp RCLK  &kp H                    &kp J     &kp K      &kp L       &kp MINUS  &kp ENTER
-&kp LSHFT  &kp Z           &kp X   &kp C     &kp V      &kp B                        &kp TAB         &mo 4      &kp N                    &kp M     &kp COMMA  &kp DOT     &kp SLASH  &kp RIGHT_SHIFT
-&kp LCTRL  &kp LEFT_SHIFT  &gui    &kp LALT  &kp SPACE  &macro_layer LEFT_CONTROL 0  &kp LEFT_SHIFT  &mo 3      &hold_yuusen 2 INT_KANA  &kp BSPC  &kp RALT   &kp ESCAPE  &mo 1      &kp RCTRL
+&kp ESC    &kp N1        &kp N2        &kp N3    &kp N4     &kp N5                                   &kp N6  &kp N7    &kp N8     &kp N9      &kp N0      &kp BSPC
+&kp TAB    &alt_q        &kp W         &kp E     &kp R      &kp T                                    &kp Y   &kp U     &kp I      &kp O       &kp P       &kp BSPC
+&kp LCTRL  &kp A         &kp S         &kp D     &kp F      &kp G      &mkp LCLK       &mkp RCLK     &kp H   &kp J     &kp K      &kp L       &kp MINUS   &kp ENTER
+&kp LSHFT  &kp Z         &kp X         &kp C     &kp V      &kp B      &kp TAB         &mo 4         &kp N   &kp M     &kp COMMA  &kp DOT     &kp SLASH   &kp RIGHT_SHIFT
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &ime_off  &kp LCTRL  &kp SPACE  &kp LEFT_SHIFT  &kp INT_KANA  &mo 2   &kp BSPC  &kp RALT   &kp ESCAPE  &kp ESCAPE  &kp RCTRL
             >;
         };
 
@@ -174,11 +175,11 @@
 
         cursor {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans       &trans         &trans      &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans       &trans         &kp DELETE  &kp BACKSPACE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN     &kp UP_ARROW   &kp RIGHT   &kp ENTER      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END     &kp BACKSPACE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans         &trans      &kp DELETE     &trans
+&trans  &trans        &trans        &trans        &trans        &trans                                                             &trans        &trans            &trans             &trans         &trans         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                                             &kp NUMBER_6  &kp N7            &kp N8             &kp N9         &kp N0         &trans
+&trans  &trans        &trans        &trans        &trans        &kp LEFT_BRACKET         &trans               &trans               &kp LEFT      &kp DOWN          &kp UP_ARROW       &kp RIGHT      &kp ENTER      &trans
+&trans  &trans        &trans        &trans        &trans        &kp INT3                 &kp INTERNATIONAL_1  &kp INTERNATIONAL_1  &kp SEMI      &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp BACKSPACE  &trans
+&trans  &trans        &trans        &trans        &trans        &kp LS(INTERNATIONAL_1)  &trans               &trans               &trans        &trans            &trans             &trans         &trans         &trans
             >;
         };
 
