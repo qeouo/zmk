@@ -48,7 +48,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        aaaaaa {
+            bindings = <&kp A>;
+            key-positions = <57 56 57 58>;
+        };
+    };
 
     macros {
         ime_off: ime_off {
