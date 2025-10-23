@@ -23,8 +23,7 @@
         34 // K
         35 // L
         36 // ;
-        53
-        5
+        56 57 58
         >;
     };
 
@@ -50,11 +49,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        aaaaaa {
-            bindings = <&kp A>;
-            key-positions = <57 56 57 58>;
-        };
     };
 
     macros {
