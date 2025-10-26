@@ -160,10 +160,10 @@
         shift_ime: shift_ime {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_IME";
-            bindings = <&kp>, <&ime>;
+            bindings = <&kp>, <&ime_off>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             hold-while-undecided;
         };
