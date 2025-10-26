@@ -231,5 +231,15 @@
 &trans  &trans     &trans          &trans          &trans  &trans  &sys_reset  &out OUT_USB  &out OUT_BLE  &trans        &trans        &sys_reset    &bt BT_CLR    &trans
             >;
         };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &mo 2      &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mo 2      &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+            >;
+        };
     };
 };
