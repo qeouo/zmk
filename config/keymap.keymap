@@ -11,6 +11,11 @@
 
 &mt { hold-while-undecided; };
 
+&lt {
+    hold-while-undecided;
+    flavor = "hold-preferred";
+};
+
 / {
     /omit-if-no-ref/
 
@@ -40,7 +45,6 @@
             process-next;
         };
     };
-
 
     macros {
         ime_off: ime_off {
