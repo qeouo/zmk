@@ -7,7 +7,7 @@
 
 #define MOUSE 1
 
-&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 100>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 100000>; };
 
 &mt { hold-while-undecided; };
 
@@ -18,15 +18,7 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <200>;
-        excluded-positions = <
-        20 // i
-        33 // J
-        34 // K
-        35 // L
-        36 // ;
-        48 // ,
-        58 // shift
-        >;
+        excluded-positions = <24 58 57 33 34 35 48 53 38>;
     };
 
     trackball_listener: trackball_listener {
@@ -49,14 +41,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        aaaj {
-            bindings = <&none>;
-            key-positions = <24 58 57 33 34 35 48 53 38>;
-        };
-    };
 
     macros {
         ime_off: ime_off {
