@@ -50,7 +50,7 @@
         ime_off: ime_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_MUHENKAN &kp LANG2>;
+            bindings = <&kp INT_KANA &kp LANG2>;
             label = "IME_OFF";
             wait-ms = <0>;
         };
@@ -188,11 +188,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC     &kp N1            &kp N2        &kp N3        &kp N4    &kp N5                                 &kp N6          &kp N7    &kp N8     &kp N9      &kp N0             &kp BSPC
-&kp ESCAPE  &alt_q            &kp W         &kp E         &kp R     &kp T                                  &kp Y           &kp U     &kp I      &kp O       &kp P              &kp MINUS
-&kp LCTRL   &kp A             &kp S         &kp D         &kp F     &kp G       &mkp LCLK       &mkp RCLK  &kp H           &kp J     &kp K      &kp L       &kp SEMI           &kp SINGLE_QUOTE
-&kp LSHFT   &kp Z             &kp X         &kp C         &kp V     &kp B       &mo 4           &mo 4      &kp N           &kp M     &kp COMMA  &kp DOT     &kp SLASH          &kp INTERNATIONAL_1
-&mo 4       &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &ime_off  &space_tab  &kp LEFT_SHIFT  &mo 3      &lt 2 INT_KANA  &kp BSPC  &kp RALT   &kp DELETE  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp ESC     &kp N1    &kp N2        &kp N3            &kp N4     &kp N5                                 &kp N6  &kp N7    &kp N8     &kp N9      &kp N0     &kp BSPC
+&kp ESCAPE  &alt_q    &kp W         &kp E             &kp R      &kp T                                  &kp Y   &kp U     &kp I      &kp O       &kp P      &kp MINUS
+&kp TAB     &kp A     &kp S         &kp D             &kp F      &kp G       &mkp LCLK       &mkp RCLK  &kp H   &kp J     &kp K      &kp L       &kp SEMI   &kp SINGLE_QUOTE
+&kp LSHFT   &kp Z     &kp X         &kp C             &kp V      &kp B       &mo 4           &mo 4      &kp N   &kp M     &kp COMMA  &kp DOT     &kp SLASH  &kp INTERNATIONAL_1
+&mo 4       &ime_off  &kp LEFT_GUI  &mt LEFT_ALT ESC  &kt LCTRL  &space_tab  &kp LEFT_SHIFT  &mo 3      &mo 2   &kp BSPC  &kp RALT   &kp DELETE  &kp INT2   &kp BACKSLASH
             >;
         };
 
@@ -210,8 +210,8 @@
             bindings = <
 &trans  &trans            &trans        &trans        &trans               &trans                     &trans            &trans     &trans             &trans         &trans        &trans
 &trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4         &kp N5                     &kp NUMBER_6      &kp N7     &kp N8             &kp N9         &kp N0        &trans
-&trans  &kp LEFT_BRACKET  &trans        &trans        &kp INTERNATIONAL_3  &kp EQUAL  &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW       &kp RIGHT      &kp ENTER     &trans
-&trans  &trans            &trans        &trans        &trans               &trans     &trans  &trans  &kp SINGLE_QUOTE  &kp MINUS  &kp RIGHT_BRACKET  &kp BACKSLASH  &bs_underbar  &trans
+&trans  &kp SINGLE_QUOTE  &trans        &trans        &kp INTERNATIONAL_3  &kp EQUAL  &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW       &kp RIGHT      &kp ENTER     &trans
+&trans  &trans            &trans        &trans        &trans               &trans     &trans  &trans  &kp LEFT_BRACKET  &kp MINUS  &kp RIGHT_BRACKET  &kp BACKSLASH  &bs_underbar  &trans
 &trans  &trans            &trans        &trans        &trans               &trans     &trans  &trans  &trans            &trans     &trans             &trans         &kp DELETE    &trans
             >;
         };
