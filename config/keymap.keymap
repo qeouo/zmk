@@ -52,7 +52,7 @@
             #binding-cells = <0>;
             bindings = <&kp INT_KANA &kp LANG2>;
             label = "IME_OFF";
-            wait-ms = <0>;
+            wait-ms = <10>;
         };
 
         gui_gui: gui_gui {
