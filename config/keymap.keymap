@@ -50,7 +50,7 @@
         ime_off: ime_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_KANA &kp LANG2>;
+            bindings = <&kp INT_KANA &kp LANG_ZENKAKUHANKAKU>;
             label = "IME_OFF";
             wait-ms = <10>;
         };
