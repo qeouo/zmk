@@ -162,10 +162,10 @@
             hold-while-undecided;
         };
 
-        bs_underbar: bs_underbar {
+        zero_underbar: zero_underbar {
             compatible = "zmk,behavior-mod-morph";
-            label = "BS_UNDERBAR";
-            bindings = <&kp BACKSPACE>, <&kp INT_RO>;
+            label = "ZERO_UNDERBAR";
+            bindings = <&kp N0>, <&kp INT_RO>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -207,11 +207,11 @@
 
         cursor {
             bindings = <
-&trans  &trans            &trans        &trans               &trans               &trans                     &trans            &trans     &trans             &trans         &trans         &trans
-&trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3         &kp NUMBER_4         &kp N5                     &kp NUMBER_6      &kp N7     &kp N8             &kp N9         &kp N0         &trans
-&trans  &kp SINGLE_QUOTE  &trans        &kp INTERNATIONAL_1  &kp INTERNATIONAL_3  &kp EQUAL  &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW       &kp RIGHT      &kp ENTER      &trans
-&trans  &trans            &trans        &trans               &trans               &trans     &trans  &trans  &kp LEFT_BRACKET  &kp MINUS  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp BACKSPACE  &trans
-&trans  &trans            &trans        &trans               &trans               &trans     &trans  &trans  &trans            &trans     &trans             &trans         &kp DELETE     &trans
+&trans  &trans            &trans        &trans               &trans               &trans                     &trans            &trans     &trans             &trans         &trans          &trans
+&trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3         &kp NUMBER_4         &kp N5                     &kp NUMBER_6      &kp N7     &kp N8             &kp N9         &zero_underbar  &trans
+&trans  &kp SINGLE_QUOTE  &trans        &kp INTERNATIONAL_1  &kp INTERNATIONAL_3  &kp EQUAL  &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW       &kp RIGHT      &kp ENTER       &trans
+&trans  &trans            &trans        &trans               &trans               &trans     &trans  &trans  &kp LEFT_BRACKET  &kp MINUS  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp BACKSPACE   &trans
+&trans  &trans            &trans        &trans               &trans               &trans     &trans  &trans  &trans            &trans     &trans             &trans         &kp DELETE      &trans
             >;
         };
 
