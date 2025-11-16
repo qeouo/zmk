@@ -180,6 +180,23 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        layer_mkp: layer_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MKP";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            hold-while-undecided;
+            tapping-term-ms = <200>;
+        };
+
+        middle: middle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MIDDLE";
+            #binding-cells = <0>;
+            bindings = <&layer_mkp 2 MCLK>, <&mkp MCLK>;
+        };
     };
 
     keymap {
@@ -197,11 +214,11 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mo 2      &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans   &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans   &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &middle  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans     &trans  &trans
             >;
         };
 
