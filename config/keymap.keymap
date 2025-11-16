@@ -216,11 +216,11 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans          &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans          &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &layer_mkp 2 0  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans             &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans             &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &layer_mkp 2 MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans             &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans             &trans     &trans  &trans
             >;
         };
 
