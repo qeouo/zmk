@@ -7,7 +7,7 @@
 
 #define MOUSE 1
 
-&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 100000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer MOUSE 200>; };
 
 &mt { hold-while-undecided; };
 
@@ -23,7 +23,7 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <200>;
-        excluded-positions = <58 57 54 53 33 34 35 38 24>;
+        excluded-positions = <58 57 56 54 53 33 34 35 38 24>;
     };
 
     trackball_listener: trackball_listener {
