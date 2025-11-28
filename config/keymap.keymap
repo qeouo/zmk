@@ -47,66 +47,21 @@
     };
 
     macros {
-        ime_off: ime_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp INT_KANA &kp GRAVE>;
-            label = "IME_OFF";
-        };
-
         gui_gui: gui_gui {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 2 &kp LEFT_GUI>,
+                <&mo 0 &kp LEFT_CONTROL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 2 &kp LEFT_GUI>;
+                <&mo 0 &kp LEFT_CONTROL>;
 
             label = "GUI_GUI";
         };
     };
 
     behaviors {
-        q_esc: q_esc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Q_ESC";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp ESCAPE>;
-
-            tapping-term-ms = <180>;
-        };
-
-        macro_layer: macro_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MACRO_LAYER";
-            bindings = <&kp>, <&ime_off>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        z_shift: z_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Z_SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            hold-while-undecided;
-        };
-
-        hold_yuusen: hold_yuusen {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_YUUSEN";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         alt_q: alt_q {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_Q";
@@ -127,41 +82,6 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        gui: gui {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GUI";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&gui_gui>;
-        };
-
-        slash_underscore: slash_underscore {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_UNDERSCORE";
-            bindings = <&kp SLASH>, <&kp INT_RO>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
-        };
-
-        ime: ime {
-            compatible = "zmk,behavior-tap-dance";
-            label = "IME";
-            #binding-cells = <0>;
-            bindings = <&ime_off>, <&kp INT_KANA>;
-        };
-
-        shift_ime: shift_ime {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_IME";
-            bindings = <&kp>, <&ime_off>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-        };
-
         zero_underbar: zero_underbar {
             compatible = "zmk,behavior-mod-morph";
             label = "ZERO_UNDERBAR";
@@ -180,24 +100,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
-        };
-
-        layer_mkp: layer_mkp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_MKP";
-            bindings = <&mo>, <&mkp>;
-
-            #binding-cells = <2>;
-            hold-while-undecided;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-
-        middle: middle {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MIDDLE";
-            #binding-cells = <0>;
-            bindings = <&mkp MCLK>, <&mkp MCLK>;
         };
     };
 
