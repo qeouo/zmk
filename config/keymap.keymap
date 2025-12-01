@@ -62,20 +62,20 @@
     };
 
     behaviors {
-        alt_q: alt_q {
+        alt_d: alt_d {
             compatible = "zmk,behavior-mod-morph";
-            label = "ALT_Q";
-            bindings = <&ctrl_q>, <&kp TAB>;
+            label = "ALT_D";
+            bindings = <&ctrl_d>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
             keep-mods = <(MOD_LALT)>;
         };
 
-        ctrl_q: ctrl_q {
+        ctrl_d: ctrl_d {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_Q";
-            bindings = <&kp Q>, <&kp TAB>;
+            label = "CTRL_D";
+            bindings = <&kp D>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -101,6 +101,16 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        ctrls: ctrls {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRLS";
+            bindings = <&kp S>, <&mt LEFT_SHIFT S>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
     };
 
     combos {
@@ -118,8 +128,8 @@
         layer_0 {
             bindings = <
 &kp ESC               &kp N1                 &kp N2        &kp N3        &kp N4                &kp N5                                                       &kp N6            &kp N7  &kp N8     &kp N9      &kp N0           &kp BSPC
-&esc_tab              &alt_q                 &kp W         &kp E         &kp R                 &kp T                                                        &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
-&mt LEFT_CONTROL TAB  &kp A                  &kp S         &kp D         &kp F                 &kp G      &mkp LCLK                  &mkp RCLK              &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
+&esc_tab              &kp Q                  &kp W         &kp E         &kp R                 &kp T                                                        &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
+&mt LEFT_CONTROL TAB  &kp A                  &ctrls        &alt_d        &kp F                 &kp G      &mkp LCLK                  &mkp RCLK              &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
 &kp LSHFT             &kp Z                  &kp X         &kp C         &kp V                 &kp B      &lt 4 ESCAPE               &mo 4                  &kp N             &kp M   &kp COMMA  &kp DOT     &kp SLASH        &kp INTERNATIONAL_1
 &mo 4                 &mt LEFT_SHIFT ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &mt LEFT_CONTROL TAB  &kp SPACE  &mt LEFT_SHIFT LANGUAGE_2  &mt RIGHT_CONTROL ESC  &lt 2 LANGUAGE_1  &none   &none      &kp DELETE  &kp RIGHT_SHIFT  &kp BACKSLASH
             >;
@@ -167,11 +177,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                  &trans    &trans         &trans     &trans   &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans                  &trans    &trans         &trans     &trans   &trans  &trans
-&trans  &kp LC(A)  &kp LC(S)  &trans     &trans     &trans  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans  &trans  &trans    &trans         &trans     &trans   &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans  &trans  &trans  &trans    &trans         &trans     &trans   &trans  &trans
+&trans  &trans     &trans                &trans     &trans     &trans                  &trans    &trans         &trans     &trans   &trans  &trans
+&trans  &trans     &trans                &trans     &trans     &trans                  &trans    &trans         &trans     &trans   &trans  &trans
+&trans  &kp LC(A)  &mt LEFT_SHIFT LC(S)  &kp TAB    &trans     &trans  &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(X)             &kp LC(C)  &kp LC(V)  &trans  &trans  &trans  &trans    &trans         &trans     &trans   &trans  &trans
+&trans  &trans     &trans                &trans     &trans     &trans  &trans  &trans  &trans    &trans         &trans     &trans   &trans  &trans
             >;
         };
     };
