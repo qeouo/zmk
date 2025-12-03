@@ -66,8 +66,6 @@
         };
     };
 
-
-
     behaviors {
         tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
@@ -86,6 +84,7 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
         alt_d: alt_d {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_D";
@@ -151,11 +150,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC               &kp N1                 &kp N2        &kp N3        &kp N4                &kp N5                                                       &kp N6            &kp N7  &kp N8     &kp N9      &kp N0           &kp BSPC
-&esc_tab              &kp Q                  &kp W         &kp E         &kp R                 &kp T                                                        &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
-&mt LEFT_CONTROL TAB  &kp A                  &ctrls        &alt_d        &kp F                 &kp G      &mkp LCLK                  &mkp RCLK              &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
-&kp LSHFT             &kp Z                  &kp X         &kp C         &kp V                 &kp B      &lt 4 ESCAPE               &mo 4                  &kp N             &kp M   &kp COMMA  &kp DOT     &kp SLASH        &kp INTERNATIONAL_1
-&mo 4                 &mt LEFT_SHIFT ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &mt LEFT_CONTROL TAB  &kp SPACE  &mt LEFT_SHIFT LANGUAGE_2  &mt RIGHT_CONTROL ESC  &lt 2 LANGUAGE_1  &none   &none      &kp DELETE  &kp RIGHT_SHIFT  &kp BACKSLASH
+&kp ESC               &kp N1                 &kp N2        &kp N3        &kp N4                                &kp N5                                                                       &kp N6            &kp N7  &kp N8     &kp N9      &kp N0           &kp BSPC
+&esc_tab              &kp Q                  &kp W         &kp E         &kp R                                 &kp T                                                                        &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
+&mt LEFT_CONTROL TAB  &kp A                  &ctrls        &alt_d        &kp F                                 &kp G      &mkp LCLK                                  &mkp RCLK              &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
+&kp LSHFT             &kp Z                  &kp X         &kp C         &kp V                                 &kp B      &lt 4 ESCAPE                               &mo 4                  &kp N             &kp M   &kp COMMA  &kp DOT     &kp SLASH        &kp INTERNATIONAL_1
+&mo 4                 &mt LEFT_SHIFT ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &mt_exit_AML_on_tap LEFT_CONTROL TAB  &kp SPACE  &mt_exit_AML_on_tap LEFT_SHIFT LANGUAGE_2  &mt RIGHT_CONTROL ESC  &lt 2 LANGUAGE_1  &none   &none      &kp DELETE  &kp RIGHT_SHIFT  &kp BACKSLASH
             >;
         };
 
