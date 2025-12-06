@@ -64,6 +64,13 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
         };
+
+        btchange: btchange {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&out OUT_BLE &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "BTCHANGE";
+        };
     };
 
     behaviors {
@@ -125,9 +132,9 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        ctrla: ctrla {
+        shift_a: shift_a {
             compatible = "zmk,behavior-mod-morph";
-            label = "CTRLA";
+            label = "SHIFT_A";
             bindings = <&kp A>, <&mt LEFT_SHIFT A>;
 
             #binding-cells = <0>;
@@ -152,7 +159,7 @@
             bindings = <
 &kp ESC               &kp N1            &kp N2        &kp N3        &kp N4                                &kp N5                                                           &kp N6            &kp N7  &kp N8     &kp N9      &kp N0           &kp BSPC
 &esc_tab              &kp Q             &kp W         &kp E         &kp R                                 &kp T                                                            &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
-&mt LEFT_CONTROL TAB  &kp A             &kp S         &alt_d        &kp F                                 &kp G      &mkp LCLK                                  &mkp RCLK  &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
+&mt LEFT_CONTROL TAB  &shift_a          &kp S         &alt_d        &kp F                                 &kp G      &mkp LCLK                                  &mkp RCLK  &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
 &kp LSHFT             &kp Z             &kp X         &kp C         &kp V                                 &kp B      &lt 4 ESCAPE                               &mo 4      &kp N             &kp M   &kp COMMA  &kp DOT     &kp SLASH        &kp INTERNATIONAL_1
 &mo 4                 &mt LCTRL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &mt_exit_AML_on_tap LEFT_CONTROL TAB  &kp SPACE  &mt_exit_AML_on_tap LEFT_SHIFT LANGUAGE_2  &mo 3      &lt 2 LANGUAGE_1  &none   &none      &kp DELETE  &kp RIGHT_SHIFT  &kp BACKSLASH
             >;
@@ -190,11 +197,11 @@
 
         setting {
             bindings = <
-&trans  &trans      &trans          &trans          &trans  &trans                        &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &kp F1      &kp F2          &kp F3          &kp F4  &kp F5                        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans
-&trans  &kp GRAVE   &kp SCROLLLOCK  &kp KP_NUMLOCK  &trans  &trans  &trans  &trans        &kp F11       &kp F12       &trans        &trans        &trans        &trans
-&trans  &kp INS     &kp KP_NUMLOCK  &kp CAPSLOCK    &trans  &trans  &trans  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans  &sys_reset  &trans          &trans          &trans  &trans  &trans  &out OUT_USB  &out OUT_BLE  &trans        &trans        &bt BT_CLR    &sys_reset    &trans
+&trans  &trans      &trans          &trans          &trans  &trans                        &trans        &trans       &trans       &trans       &trans       &trans
+&trans  &kp F1      &kp F2          &kp F3          &kp F4  &kp F5                        &kp F6        &kp F7       &kp F8       &kp F9       &kp F10      &trans
+&trans  &kp GRAVE   &kp SCROLLLOCK  &kp KP_NUMLOCK  &trans  &trans  &trans  &trans        &kp F11       &kp F12      &trans       &trans       &trans       &trans
+&trans  &kp INS     &kp KP_NUMLOCK  &kp CAPSLOCK    &trans  &trans  &trans  &trans        &btchange 0   &btchange 1  &btchange 2  &btchange 3  &btchange 4  &trans
+&trans  &sys_reset  &trans          &trans          &trans  &trans  &trans  &out OUT_USB  &out OUT_BLE  &trans       &trans       &bt BT_CLR   &sys_reset   &trans
             >;
         };
 
