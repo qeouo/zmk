@@ -95,11 +95,11 @@
         alt_d: alt_d {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_D";
-            bindings = <&ctrl_d>, <&kp TAB>;
+            bindings = <&kp D>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_LCTL|MOD_LGUI)>;
+            keep-mods = <(MOD_LALT|MOD_LGUI|MOD_LCTL)>;
         };
 
         ctrl_d: ctrl_d {
