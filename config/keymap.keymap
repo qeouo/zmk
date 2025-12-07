@@ -148,7 +148,7 @@
 
         aaaaa {
             bindings = <&none>;
-            key-positions = <57 58 56 48 33 34 35 36 54 53>;
+            key-positions = <57 58 56 33 34 35 36 54 53>;
         };
     };
 
