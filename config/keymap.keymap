@@ -142,6 +142,18 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        mo_exit_aml_on_tap: mo_exit_aml_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_EXIT_AML_ON_TAP";
+            bindings = <&mo>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
     };
 
     combos {
@@ -149,7 +161,7 @@
 
         aaaaa {
             bindings = <&none>;
-            key-positions = <57 58 56 33 34 35 36 54 53>;
+            key-positions = <58 33 34 35 36 54 53>;
         };
     };
 
@@ -168,21 +180,21 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 2   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans                      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans                      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo_exit_aml_on_tap 2 SEMI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans                      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans                      &trans
             >;
         };
 
         cursor {
             bindings = <
-&trans  &trans            &trans        &trans               &trans               &trans                     &trans            &trans     &trans             &trans         &trans          &trans
-&trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3         &kp NUMBER_4         &kp N5                     &kp NUMBER_6      &kp N7     &kp N8             &kp N9         &zero_underbar  &trans
-&trans  &kp LEFT_BRACKET  &trans        &kp INTERNATIONAL_1  &kp INTERNATIONAL_3  &kp EQUAL  &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW       &kp RIGHT      &kp ENTER       &trans
-&trans  &trans            &trans        &trans               &trans               &trans     &trans  &trans  &kp SINGLE_QUOTE  &kp MINUS  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp BACKSPACE   &trans
-&trans  &trans            &trans        &trans               &mo 5                &trans     &trans  &trans  &trans            &trans     &trans             &trans         &kp DELETE      &trans
+&trans  &trans            &trans        &trans             &trans         &trans                  &trans            &trans               &trans        &trans               &trans          &trans
+&trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4   &kp N5                  &kp NUMBER_6      &kp N7               &kp N8        &kp N9               &zero_underbar  &trans
+&trans  &kp SINGLE_QUOTE  &kp MINUS     &kp RIGHT_BRACKET  &kp BACKSLASH  &kp F2  &trans  &trans  &kp LEFT          &kp DOWN             &kp UP_ARROW  &kp RIGHT            &kp ENTER       &trans
+&trans  &trans            &trans        &trans             &trans         &trans  &trans  &trans  &kp LEFT_BRACKET  &kp INTERNATIONAL_3  &kp EQUAL     &kp INTERNATIONAL_1  &kp BACKSPACE   &trans
+&trans  &trans            &trans        &trans             &mo 5          &trans  &trans  &trans  &trans            &trans               &trans        &trans               &kp DELETE      &trans
             >;
         };
 
