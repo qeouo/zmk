@@ -22,8 +22,8 @@
     zip_temp_layer: zip_temp_layer {
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
-        require-prior-idle-ms = <100000>;
-        excluded-positions = <57 58 56 33 34 35 36 54 53>;
+        require-prior-idle-ms = <200>;
+        excluded-positions = <57 58 56 48 33 34 35 36 54 53>;
     };
 
     trackball_listener: trackball_listener {
@@ -88,9 +88,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             quick-tap-ms = <200>;
-            hold-while-undecided;
         };
 
         alt_d: alt_d {
@@ -149,7 +148,7 @@
 
         aaaaa {
             bindings = <&none>;
-            key-positions = <57 58 56 33 34 35 36 54 53>;
+            key-positions = <57 58 56 48 33 34 35 36 54 53>;
         };
     };
 
