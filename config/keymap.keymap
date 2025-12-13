@@ -99,8 +99,18 @@
             bindings = <&kp D>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_LCTL)>;
+            mods = <(MOD_LALT|MOD_LCTL|MOD_LGUI)>;
+            keep-mods = <(MOD_LALT|MOD_LGUI|MOD_LCTL)>;
+        };
+
+        ctrl_d: ctrl_d {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_D";
+            bindings = <&kp D>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         zero_underbar: zero_underbar {
@@ -123,16 +133,14 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        mo_exit_aml_on_tap: mo_exit_aml_on_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_EXIT_AML_ON_TAP";
-            bindings = <&mo>, <&kp_exit_AML>;
+        shift_a: shift_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_A";
+            bindings = <&kp A>, <&mt LEFT_SHIFT A>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            quick-tap-ms = <200>;
-            hold-while-undecided;
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
     };
 
@@ -141,7 +149,7 @@
 
         aaaaa {
             bindings = <&none>;
-            key-positions = <58 33 34 35 36 54 53>;
+            key-positions = <57 58 56 33 34 35 36 54 53>;
         };
     };
 
@@ -150,31 +158,31 @@
 
         layer_0 {
             bindings = <
-&kp ESC               &kp N1                 &kp N2        &kp N3        &kp N4                                &kp N5                                                            &kp N6            &kp N7  &kp N8     &kp N9      &kp N0           &kp BSPC
-&esc_tab              &kp Q                  &kp W         &kp E         &kp R                                 &kp T                                                             &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
-&mt LEFT_CONTROL TAB  &kp A                  &kp S         &alt_d        &kp F                                 &kp G      &mkp LCLK                                   &mkp RCLK  &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
-&kp LSHFT             &kp Z                  &kp X         &kp C         &kp V                                 &kp B      &lt 4 ESCAPE                                &mo 4      &kp N             &kp M   &kp COMMA  &kp DOT     &kp SLASH        &kp INTERNATIONAL_1
-&mo 4                 &mt LEFT_SHIFT ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &mt_exit_AML_on_tap LEFT_CONTROL TAB  &kp SPACE  &mt_exit_AML_on_tap RIGHT_SHIFT LANGUAGE_2  &mo 3      &lt 2 LANGUAGE_1  &none   &none      &kp DELETE  &kp RIGHT_SHIFT  &kp BACKSLASH
+&kp ESC               &kp N1            &kp N2        &kp N3        &kp N4                                &kp N5                                                           &kp N6            &kp N7  &kp N8     &kp N9      &kp N0           &kp BSPC
+&esc_tab              &kp Q             &kp W         &kp E         &kp R                                 &kp T                                                            &kp Y             &kp U   &kp I      &kp O       &kp P            &kp MINUS
+&mt LEFT_CONTROL TAB  &shift_a          &kp S         &alt_d        &kp F                                 &kp G      &mkp LCLK                                  &mkp RCLK  &kp H             &kp J   &kp K      &kp L       &kp SEMI         &kp SINGLE_QUOTE
+&kp LSHFT             &kp Z             &kp X         &kp C         &kp V                                 &kp B      &lt 4 ESCAPE                               &mo 4      &kp N             &kp M   &kp COMMA  &kp DOT     &kp SLASH        &kp INTERNATIONAL_1
+&mo 4                 &mt LCTRL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &mt_exit_AML_on_tap LEFT_CONTROL TAB  &kp SPACE  &mt_exit_AML_on_tap LEFT_SHIFT LANGUAGE_2  &mo 3      &lt 2 LANGUAGE_1  &none   &none      &kp DELETE  &kp RIGHT_SHIFT  &kp BACKSLASH
             >;
         };
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans                      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans                      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo_exit_aml_on_tap 2 SEMI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans                      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans                      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 2   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
         };
 
         cursor {
             bindings = <
-&trans  &trans            &trans        &trans             &trans         &trans                  &trans            &trans               &trans        &trans               &trans          &trans
-&trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3       &kp NUMBER_4   &kp N5                  &kp NUMBER_6      &kp N7               &kp N8        &kp N9               &zero_underbar  &trans
-&trans  &kp SINGLE_QUOTE  &kp MINUS     &kp RIGHT_BRACKET  &kp BACKSLASH  &kp F2  &trans  &trans  &kp LEFT          &kp DOWN             &kp UP_ARROW  &kp RIGHT            &kp ENTER       &trans
-&trans  &trans            &trans        &trans             &trans         &trans  &trans  &trans  &kp LEFT_BRACKET  &kp INTERNATIONAL_3  &kp EQUAL     &kp INTERNATIONAL_1  &kp BACKSPACE   &trans
-&trans  &trans            &trans        &trans             &mo 5          &trans  &trans  &trans  &trans            &trans               &trans        &trans               &kp DELETE      &trans
+&trans  &trans            &trans        &trans               &trans               &trans                     &trans            &trans     &trans             &trans         &trans          &trans
+&trans  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3         &kp NUMBER_4         &kp N5                     &kp NUMBER_6      &kp N7     &kp N8             &kp N9         &zero_underbar  &trans
+&trans  &kp LEFT_BRACKET  &trans        &kp INTERNATIONAL_1  &kp INTERNATIONAL_3  &kp EQUAL  &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW       &kp RIGHT      &kp ENTER       &trans
+&trans  &trans            &trans        &trans               &trans               &trans     &trans  &trans  &kp SINGLE_QUOTE  &kp MINUS  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp BACKSPACE   &trans
+&trans  &trans            &trans        &trans               &mo 5                &trans     &trans  &trans  &trans            &trans     &trans             &trans         &kp DELETE      &trans
             >;
         };
 
