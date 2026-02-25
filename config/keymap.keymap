@@ -74,6 +74,24 @@
     };
 
     behaviors {
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
 
         ctrl_d: ctrl_d {
             compatible = "zmk,behavior-mod-morph";
@@ -105,7 +123,17 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-   
+        mo_exit_aml_on_tap: mo_exit_aml_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_EXIT_AML_ON_TAP";
+            bindings = <&mo>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
     };
 
     combos {
